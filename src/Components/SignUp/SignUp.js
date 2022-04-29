@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 import './SignUp.css'
 
 const SignUp = () => {
@@ -14,6 +16,13 @@ const SignUp = () => {
         email: "",
         password: "",
     });
+
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useCreateUserWithEmailAndPassword(auth);
 
     const handleEmail = (e) => {
         const emailRegex = /\S+@\S+\.\S+/;
@@ -53,13 +62,17 @@ const SignUp = () => {
     };
     
 
+    const handleSubmit = e => {
+        e.preventDefault()
+        createUserWithEmailAndPassword(userInfo.email, userInfo.password);
+    }
 
 
     return (
         <div className='signup-Container'>
             
             <div className="form">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <p className='title'>Create an Account</p>
                     <br />
                     <input type="email" placeholder='Your Email' onChange={handleEmail} required />
@@ -69,7 +82,7 @@ const SignUp = () => {
                     {errors?.password && <p className='error_msg' >{errors.password}</p>}
                     <br />
                     <input type="password" placeholder='Confirm Password' onChange={handleConfirmPassword} required />
-                    {errors?.password && <p className='error_msg' >{errors.password}</p>}
+                   
                     <br />
                     <p className='reg-text'>already have account ? <NavLink to='/login' className='resgiterText'>login</NavLink> </p>
                     <button className='regBtn' type="submit">REGISTER</button>
