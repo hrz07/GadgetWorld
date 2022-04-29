@@ -22,7 +22,7 @@ a{
     font-weight: 500;
 }
 .active{
-   
+   color: aquamarine;
 }
 span{
     color:rgb(250, 143, 143);
