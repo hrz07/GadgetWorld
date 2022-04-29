@@ -11,6 +11,9 @@
     color: rgb(240, 224, 240);
     /* color: rgb(200, 240, 211); */
 }
+.nav-container .logo{
+    width: 200px;
+}
 a{
     text-decoration: none;
     margin-left: 25px;
@@ -19,7 +22,7 @@ a{
     font-weight: 500;
 }
 .active{
-    border-bottom: 4px solid rgb(200, 240, 211);
+   
 }
 span{
     color:rgb(250, 143, 143);

@@ -1,11 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../../images/logo.png'
 import './Navbar.css'
 
 const Navbar = () => {
     return (
         <div className='nav-container'>
-            <h3>PHONE'<span>mela</span></h3>
+            <img className='logo' src={logo} />
             <div className='button-section'>
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/manage'>Manage Items</NavLink>

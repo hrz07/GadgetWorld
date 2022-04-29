@@ -1,0 +1,116 @@
+.login-container{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    background: rgb(246, 246, 249);
+}
+.login-container .title{
+    padding: 10px;
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(83, 81, 81);
+}
+.login-container small{
+  text-align: center;
+  margin: 0 auto;
+   color: rgb(82, 80, 80);
+}
+
+.form{
+    width: 350px;
+    position: relative;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 20px;
+    border-radius: 25px;
+    background: white;
+}
+
+input{
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+    background: rgb(244,245,249);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+.login-container .loginBtn{
+    width : 140px;
+    height: 45px;
+    font-weight: bold;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    background:rgb(88,151,251);
+    color: white;
+    cursor: pointer;
+}
+.forget{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.forget p{
+    font-size: 13px;
+    color: rgb(96, 94, 94);
+}
+.resetbtn{
+    background: none;
+    border: none;
+    color: rgb(88,151,251);
+    padding: 5px;
+    cursor: pointer;
+    top:1px;
+    position:relative;
+}
+.resetbtn:hover{
+color:rgb(17, 102, 213);
+}
+.resgiterText{
+    color: rgb(88,151,251);
+    margin: 0;
+}
+.reg-text{
+    margin: 10px;
+    font-size: 13px;
+    color: rgb(96, 94, 94);
+}
+.or{
+    display: flex;
+}
+.or div{
+    height: 2px;
+    width: 160px;
+    border-bottom: 1px solid rgb(88,151,251);
+}
+.or p{
+    font-size: 13px;
+    padding: 15px;
+    top:-35px;
+    position: relative;
+    color: rgb(96, 94, 94);
+}
+.googleBtn{
+    background:rgb(240, 244, 250);
+    margin: 0 auto;
+    color: rgb(88,151,251);
+    padding: 10px 25px;
+    text-align: center;
+    border: none;
+    border-radius: 0px;
+    position: absolute;
+    bottom: 20px;
+    width: 90%;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.googleIcon{
+    position: relative;
+    top: 4px;
+}
