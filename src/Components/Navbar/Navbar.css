@@ -1,0 +1,26 @@
+.nav-container{
+    background:rgb(88,151,251);
+    /* background:#FFEEEE; */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.nav-container h3{
+    color: rgb(240, 224, 240);
+    /* color: rgb(200, 240, 211); */
+}
+a{
+    text-decoration: none;
+    margin-left: 25px;
+    color: white;
+    padding-bottom: 8px;
+    font-weight: 500;
+}
+.active{
+    border-bottom: 4px solid rgb(200, 240, 211);
+}
+span{
+    color:rgb(250, 143, 143);
+}
