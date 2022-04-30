@@ -7,6 +7,7 @@ import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
 import AddItems from './Components/AddItems/AddItems';
 import ManageItems from './Components/ManageItems/ManageItems';
+import MyItems from './Components/MyItems/MyItems';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/register' element={<SignUp></SignUp>}></Route>
         <Route path='/additems' element={<AddItems></AddItems>}></Route>
         <Route path='/manageitems' element={<ManageItems></ManageItems>}></Route>
+        <Route path='/myitems' element={<MyItems></MyItems>}></Route>
       </Routes>
     </div>
   );

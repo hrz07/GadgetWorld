@@ -1,8 +1,11 @@
 import React from 'react';
 import './ItemCard.css'
 
-const ItemCard = ({ item }) => {
-    const { name, img, quantity, description, sold, supplierEmail, supplierName, price,_id,deleteItem } = item
+const ItemCard = ({ item,deleteItem }) => {
+    const { name, img, quantity, description, sold, supplierEmail, supplierName, price, _id } = item
+    
+
+
     return (
         <div className='itemCardContainer'>
             <div className='imgBox'>

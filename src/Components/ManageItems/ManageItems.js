@@ -9,11 +9,22 @@ const ManageItems = () => {
         fetch('http://localhost:4000/items')
         .then(res => res.json())
        .then(data=> setItems(data)) 
-  })
+  },[items])
 
 
   const deleteItem = (id) => {
-    console.log(id)
+    const url = `http://localhost:4000/item/${id}`
+    fetch(url, {
+        method: 'DELETE',
+    })
+        .then(res => res.json())
+        .then(data => {
+            if (data.deletedCount > 0) {
+                const restItem = items.filter(item => item._id != id)
+                setItems(restItem);
+            }
+        })
+
   }
 
 

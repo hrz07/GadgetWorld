@@ -19,7 +19,7 @@ const Navbar = () => {
                     <>
                         <NavLink to='/manageitems'>Manage Items</NavLink>
                         <NavLink to='/additems'>Add Item</NavLink>
-                        <NavLink to='/myitem'>My items</NavLink> 
+                        <NavLink to='/myitems'>My items</NavLink> 
                         <button className='logOutBtn' onClick={()=>signOut(auth)} >Logout</button>   
                         </>
                         :
