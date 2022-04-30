@@ -1,0 +1,64 @@
+.itemCardContainer{
+    width: 400px;
+    height: 340px;
+    border: 1px solid rgb(88,151,251);
+    border-radius: 5px;
+    display:flex;
+    flex-direction:column;
+    position: relative;
+}
+.itemCardContainer img{
+    width: 100px;
+}
+.imgBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    height: 120px;
+}
+.imgBox h1{
+    color: rgb(88,151,251);
+    margin: 5px;
+}
+.price{
+    color: rgb(238, 83, 83);
+    font-weight: 800;
+    /* font-style: italic; */
+    margin: 0;
+}
+.stockInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+.article small{
+    color: rgb(63, 63, 63);
+}
+.article {
+    padding: 8px;
+    text-align: justify;
+}
+.blueBack{
+   background:  rgb(88, 150, 251);
+   padding: 7px;
+   color: white;
+   border-radius: 5px;
+}
+.deleteBtn{
+    height: 40px;
+    border: none;
+    background: rgb(243, 25, 25);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    cursor: pointer;
+    width: 95%;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+}
+.deleteBtn:hover{
+    background: rgb(200, 10, 10);
+}

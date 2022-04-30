@@ -5,6 +5,8 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
+import AddItems from './Components/AddItems/AddItems';
+import ManageItems from './Components/ManageItems/ManageItems';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<SignUp></SignUp>}></Route>
+        <Route path='/additems' element={<AddItems></AddItems>}></Route>
+        <Route path='/manageitems' element={<ManageItems></ManageItems>}></Route>
       </Routes>
     </div>
   );

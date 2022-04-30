@@ -27,3 +27,11 @@ a{
 span{
     color:rgb(250, 143, 143);
 }
+.logOutBtn{
+    background:none;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left:10px ;
+}
