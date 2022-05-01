@@ -41,3 +41,11 @@
 .imgSection img{
     width: 100%;
 }
+
+.inventory{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 30vh 0;
+    justify-items: center;
+    padding: 50px;
+}

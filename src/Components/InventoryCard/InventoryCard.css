@@ -1,0 +1,71 @@
+.intentoryCardContainer{
+    width: 350px;
+    /* border: 1px solid lightgray; */
+    position: relative;
+    padding: 8px;
+    border-radius: 5px;
+    height: 520px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.intentoryCardContainer img{
+    width: 350px;
+    border-radius: 15px;
+}
+.pdName{
+    font-size: 35px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20vh;
+    margin-left: 10px;
+    color: rgb(109, 106, 106);
+    transition: 0.8s ease;
+}
+.intentoryCardContainer:hover .pdName{
+    color: white;
+    bottom: 25vh;
+}
+.detailBtn{
+    padding: 10px 30px;
+   border: none;
+   background: rgb(88,151,251);
+   border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    bottom: 25vh;
+    display: none;
+    transition: 0.1s ease-in-out;
+    margin-left: 10px;
+}
+.intentoryCardContainer:hover .detailBtn{ 
+    display:block;
+}
+.pdPrice{
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0;
+    /* color: rgb(47, 47, 47); */
+    color:rgb(88,151,251);
+}
+.stock{
+    margin: 2px;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(34, 34, 34);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.supplier{
+    margin: 2px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: rgb(34, 34, 34);
+    font-size: 14px;
+}
+.des{
+    margin: 4px 0;
+    padding: 5px;
+    text-align: justify;
+    font-size: 14px;
+    color: rgb(124, 123, 123);
+}
