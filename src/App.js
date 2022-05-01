@@ -8,6 +8,8 @@ import SignUp from './Components/SignUp/SignUp';
 import AddItems from './Components/AddItems/AddItems';
 import ManageItems from './Components/ManageItems/ManageItems';
 import MyItems from './Components/MyItems/MyItems';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Notfound from './Components/NotFound/Notfound';
 
 function App() {
   return (
@@ -17,9 +19,22 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<SignUp></SignUp>}></Route>
-        <Route path='/additems' element={<AddItems></AddItems>}></Route>
-        <Route path='/manageitems' element={<ManageItems></ManageItems>}></Route>
-        <Route path='/myitems' element={<MyItems></MyItems>}></Route>
+        <Route path='/additems' element={
+          <PrivateRoute>
+            <AddItems></AddItems>
+          </PrivateRoute>
+        }></Route>
+        <Route path='/manageitems' element={
+          <PrivateRoute>
+            <ManageItems></ManageItems>
+          </PrivateRoute>
+        }></Route>
+        <Route path='/myitems' element={
+          <PrivateRoute>
+            <MyItems></MyItems>
+          </PrivateRoute>
+        }></Route>
+        <Route path='*' element={ <Notfound></Notfound> } ></Route>
       </Routes>
     </div>
   );
