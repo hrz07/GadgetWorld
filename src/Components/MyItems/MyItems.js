@@ -9,12 +9,12 @@ const MyItems = () => {
     const [myItems, setMyItems] = useState([])
 
 
-    const Email = user?.email
+    const email = user?.email
     useEffect(() => {
-        fetch(`http://localhost:4000/items/?email=${Email}`)
+        fetch(`http://localhost:4000/item/?email=${email}`)
             .then(res => res.json())
             .then(data=> setMyItems(data))
-    },[myItems])
+    },[myItems,user])
 
 
 
