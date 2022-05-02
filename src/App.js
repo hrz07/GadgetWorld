@@ -10,6 +10,7 @@ import ManageItems from './Components/ManageItems/ManageItems';
 import MyItems from './Components/MyItems/MyItems';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Notfound from './Components/NotFound/Notfound';
+import UpdatePage from './Components/UpdatePage/UpdatePage';
 
 function App() {
   return (
@@ -34,6 +35,11 @@ function App() {
             <MyItems></MyItems>
           </PrivateRoute>
         }></Route>
+        <Route path='/inventory/:id' element={
+          <PrivateRoute>
+            <UpdatePage></UpdatePage>
+          </PrivateRoute>
+        } ></Route>
         <Route path='*' element={ <Notfound></Notfound> } ></Route>
       </Routes>
     </div>

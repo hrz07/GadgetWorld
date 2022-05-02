@@ -28,7 +28,7 @@ const Home = () => {
                     <img src={img} alt="" />
                 </div>
             </section>
-
+            <h1 className='inventoryTitle'>Top Exclusive Products</h1>
             <section className='inventory'>
                 {
                     items.map(item=> <InventoryCard  key={item._id} item={item} /> )

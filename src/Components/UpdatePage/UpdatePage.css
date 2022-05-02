@@ -1,0 +1,92 @@
+.itemUpdateBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+
+.updatePageContainer{
+    width: 800px;
+    /* border: 1px solid lightgray; */
+    padding: 4px;
+    display: flex;
+   gap: 20px;
+   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.updatePageContainer img{
+    width: 400px;
+    
+}
+.name{
+    font-size: 50px;
+    margin: 5px 0;
+    font-weight: bold;
+    color: rgb(55, 55, 55);
+}
+.price{
+    font-size: 25px;
+}
+.productInfoBox{
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    padding: 10px;
+}
+.suplierInfoBox p{
+    margin: 5px 0;
+}
+.suplierInfoBox .des{
+    padding: 0;
+}
+.suplierInfoBox span{
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+}
+.btnBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: content;
+    margin-top: 5px;
+}
+.updateBox{
+    display: flex;
+}
+.updateBox input{
+    width: 50px;
+    height: 18px;
+    margin: 0;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(203, 201, 201);
+
+}
+.deliverBtn{
+    width: 100px;
+    height: 40px;
+    background: rgb(243, 150, 150);
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 15px;
+    margin: 0;
+}
+.deliverBtn:hover{
+    background: rgb(244, 120, 120);
+}
+.restockBtn{
+    width: 100px;
+    height: 40px;
+    background: rgb(88,151,251);
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 15px;
+    margin: 0;
+}
+.restockBtn:hover{
+    background: rgb(59, 130, 244);
+}

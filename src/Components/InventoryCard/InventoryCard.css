@@ -10,7 +10,7 @@
 
 .intentoryCardContainer img{
     width: 350px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 .pdName{
     font-size: 35px;
@@ -37,6 +37,7 @@
     display: none;
     transition: 0.1s ease-in-out;
     margin-left: 10px;
+    cursor: pointer;
 }
 .intentoryCardContainer:hover .detailBtn{ 
     display:block;
@@ -68,4 +69,7 @@
     text-align: justify;
     font-size: 14px;
     color: rgb(124, 123, 123);
+}
+.detailBtn:hover{
+    background: rgb(66, 135, 246);
 }
