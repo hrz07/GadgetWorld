@@ -1,9 +1,9 @@
 import React from 'react';
 import './ItemCard.css'
 
-const ItemCard = ({ item,deleteItem }) => {
+const ItemCard = ({ item, deleteItem }) => {
     const { name, img, quantity, description, sold, supplierEmail, supplierName, price, _id } = item
-    
+
 
 
     return (
@@ -18,11 +18,10 @@ const ItemCard = ({ item,deleteItem }) => {
             <div className='article'>
                 <small>`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus pariatur quaerat voluptatum consequatur ipsam ducimus sunt non libero nesciunt voluptatibus.`</small>
                 <div className='stockInfo'>
-                    <p className='blueBack'>Stock : { quantity}</p>
-                    <p className='blueBack'>Sold : { sold}</p>
-                    <p className='blueBack'>Suplier : { supplierName}</p>
+                    <p className='blueBack'>Stock : {quantity}</p>
+                    <p className='blueBack'>Suplier : {supplierName}</p>
                 </div>
-                <button className='deleteBtn' onClick={()=>deleteItem(_id)} >Delete</button>
+                <button className='deleteBtn' onClick={() => deleteItem(_id)} >Delete</button>
             </div>
         </div>
     );
