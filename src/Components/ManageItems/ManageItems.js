@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ItemCard from '../ItemCard/ItemCard';
+import {Link} from 'react-router-dom'
 import './ManageItems.css'
 
 const ManageItems = () => {
@@ -30,12 +31,16 @@ const ManageItems = () => {
 
     return (
         <div>
+            <h1 className='manageAllItemsTitle'>Manage All Products</h1>
             <div className='manageItemContainer'>
                 {
                     items.map(item=> <ItemCard key={item._id} item={item} deleteItem={deleteItem} /> )
                    
                 }
             </div>
+            <div className='addItemBtnBox'>
+            <Link className='addItemBtn' to='/additems'>Add a new product</Link>
+        </div>
         </div>
 
     );

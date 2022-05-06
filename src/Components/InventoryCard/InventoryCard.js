@@ -9,8 +9,8 @@ const InventoryCard = ({ item }) => {
             <img src={img} alt="" />
             <p className='pdName'>{name}</p>
             <p className='pdPrice'>${price}</p>
-            <p className='stock'>Stock: {quantity}</p>
-            <p className='supplier'>Supplier: {supplierName}</p>
+            <p className='stock'><span>Stock</span>: {quantity}</p>
+            <p className='supplier'> <span>Supplier</span>: {supplierName}</p>
             <p className='des'>{description}</p>
             <br />
             <Link to={'/inventory/' + _id} className='detailBtn'>Update</Link>

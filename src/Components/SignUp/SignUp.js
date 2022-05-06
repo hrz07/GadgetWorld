@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import React, { useState,useEffect } from 'react';
+import { NavLink,useLocation, useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword,useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import './SignUp.css'
 
 const SignUp = () => {
+
+
+    const [user1] = useAuthState(auth);
+
 
     const [userInfo, setUserInfo] = useState({
         email: "",
@@ -22,7 +26,7 @@ const SignUp = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const handleEmail = (e) => {
         const emailRegex = /\S+@\S+\.\S+/;
@@ -60,6 +64,17 @@ const SignUp = () => {
             setUserInfo({ ...userInfo, confirmPass: "" });
         }
     };
+
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+
+    useEffect(() => {
+        if (user1) {
+            navigate(from);
+        }
+    }, [user1]);
     
 
     const handleSubmit = e => {

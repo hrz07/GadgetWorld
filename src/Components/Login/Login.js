@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState,useEffect } from 'react';
+import { NavLink,useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Login.css'
 import auth from '../../firebase.init';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle,useAuthState, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 
 const Login = () => {
 
+    const [user1] = useAuthState(auth);
     const [userInfo, setUserInfo] = useState({
         email: "",
         password: "",
@@ -54,9 +57,30 @@ const Login = () => {
 
     }
 
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+
+    useEffect(() => {
+        if (user1) {
+            navigate(from);
+        }
+    }, [user1]);
+
     const handleSubmit = e => {
         e.preventDefault()
         signInWithEmailAndPassword(userInfo.email, userInfo.password);
+    }
+
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const passwordReset = async () => {
+        if (userInfo.email) {
+            await sendPasswordResetEmail(userInfo.email);
+            toast.success('Sent email');
+        }
+        else {
+            toast.error('please enter your email address');
+        }
     }
 
 
@@ -75,7 +99,7 @@ const Login = () => {
                     <br />
                 </form>
                 <div className='forget'>
-                    <p className='forgetText'> forget password ?</p> <button className='resetbtn' >Reset Password</button>
+                    <p className='forgetText'> forget password ?</p> <button className='resetbtn' onClick={passwordReset} >Reset Password</button>
                 </div>
 
                 <div className='or'>
@@ -85,6 +109,7 @@ const Login = () => {
                 </div>
                 <button className='googleBtn' onClick={()=>signInWithGoogle()} > <FcGoogle className='googleIcon' size={18} /> Continue With Google</button>
             </div>
+            <ToastContainer />
         </div>
     );
 };

@@ -1,0 +1,31 @@
+.addDataContainer{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.AddDataForm{
+    /* margin-top: 20vh; */
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.AddDataForm input{
+    border-radius: 5px;
+    background-color: rgb(242, 242, 240);
+
+}
+.addItemBtn{
+     background:rgb(88,151,251);
+     border: none;
+     padding: 10px 25px;
+     color: white;
+     border-radius: 15px;
+     cursor:pointer;
+}
+.addItemBtn:hover{
+    background:rgb(31, 111, 241);
+}
+.addItemTitle{
+    color: rgb(88,151,251);
+}

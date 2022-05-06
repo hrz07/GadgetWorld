@@ -36,7 +36,9 @@ const MyItems = () => {
 
     return (
         <div className='myItemContainer'>
+        
             {
+                myItems.length<1 ? <h1>You dont added any product yet</h1> :
                 myItems.map(item=> <ItemCard key={item._id} item={item} deleteItem={deleteItem} /> )
             }
         </div>

@@ -6,3 +6,25 @@
     margin-top: 100px;
     grid-gap: 50px;
 }
+.manageAllItemsTitle{
+    text-align: center;
+    color: rgb(80, 136, 239);
+}
+.addItemBtnBox{
+    display: flex;
+    height : 100px;
+    width : 100%;
+    align-items: center;
+}
+.addItemBtn{
+    background: rgb(88,151,251);
+    color: white;
+    margin : 0 auto;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius:10px;
+}
+.addItemBtn:hover{
+    background: rgb(33, 115, 247);
+}

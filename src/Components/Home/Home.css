@@ -51,8 +51,47 @@
 }
 .inventoryTitle{
     text-align: center;
-    font-size: 50px;
+    font-size: 35px;
     margin: 0;
     color: rgb(53, 52, 52);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
+.seeAllItems{
+    background: rgb(88,151,251);
+    color: white;
+    margin : 0 auto;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius:10px;
+}
+.seeAllItems:hover{
+    background: rgb(33, 115, 247);
+}
+.allItemBtndiv{
+    display: flex;
+    height : 100px;
+    width : 100%;
+    align-items: center;
+}
+.serviceBox{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+   justify-content: center;
+   margin-bottom: 10vh;
+}
+.service img{
+    width: 77px;
+}
+.service{
+    width: 290px;
+    align-items: center;
+    text-align: center;
+}
+.service p{
+    font-size: 14px;
+}
+
