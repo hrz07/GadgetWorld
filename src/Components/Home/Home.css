@@ -44,14 +44,18 @@
 }
 
 .inventory{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    justify-items: center;
-    padding: 50px;
+    
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    align-content: center;
+    justify-content: center;
 }
 .inventoryTitle{
     text-align: center;
-    font-size: 35px;
+    font-size: 25px;
     margin: 0;
     color: rgb(53, 52, 52);
     /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
@@ -83,6 +87,9 @@
    justify-content: center;
    margin-bottom: 10vh;
 }
+.sellerContainer{
+    margin: 10vh 0;
+}
 .service img{
     width: 77px;
 }
@@ -90,8 +97,39 @@
     width: 290px;
     align-items: center;
     text-align: center;
+    cursor: pointer;
+}
+.service:hover{
+    color:rgb(33, 115, 247);
 }
 .service p{
     font-size: 14px;
 }
-
+.topSellers{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 10vh;
+    gap: 30px;
+}
+.sellerTitle{
+    text-align: center;
+}
+.seller{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.seller p{
+    margin: 4px 0;
+}
+.seller p:hover{
+    color: rgb(33, 115, 247);
+}
+.icon{
+    color: rgb(33, 115, 247);
+}
+.sellerTexts{
+    padding: 15px;
+}
