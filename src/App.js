@@ -11,6 +11,7 @@ import MyItems from './Components/MyItems/MyItems';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Notfound from './Components/NotFound/Notfound';
 import UpdatePage from './Components/UpdatePage/UpdatePage';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         } ></Route>
         <Route path='*' element={ <Notfound></Notfound> } ></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

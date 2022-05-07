@@ -11,7 +11,7 @@ const Navbar = () => {
     const [user, loading, error] = useAuthState(auth);
     return (
         <div className='nav-container'>
-            <img className='logo' src={logo} />
+            <h2>Gadget<span>World</span> </h2>
             <div className='button-section'>
                 <NavLink to='/'>Home</NavLink>
                 {

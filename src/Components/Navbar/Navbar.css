@@ -7,6 +7,12 @@
     justify-content: space-between;
     padding: 20px;
 }
+.nav-container h2{
+    color: white;
+}
+.nav-container h2 span{
+    color: rgb(89, 89, 88);
+}
 .nav-container h3{
     color: rgb(240, 224, 240);
     /* color: rgb(200, 240, 211); */
