@@ -12,6 +12,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Notfound from './Components/NotFound/Notfound';
 import UpdatePage from './Components/UpdatePage/UpdatePage';
 import Footer from './Components/Footer/Footer';
+import Blog from './Components/Blog/Blog';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<SignUp></SignUp>}></Route>
+        <Route path='/blog' element={<Blog></Blog>} ></Route>
         <Route path='/additems' element={
           <PrivateRoute>
             <AddItems></AddItems>

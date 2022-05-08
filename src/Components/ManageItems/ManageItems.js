@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ItemCard from '../ItemCard/ItemCard';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './ManageItems.css'
 
 const ManageItems = () => {
@@ -14,18 +14,21 @@ const ManageItems = () => {
 
 
     const deleteItem = (id) => {
-        const url = `http://localhost:4000/item/${id}`
-        fetch(url, {
-            method: 'DELETE',
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount > 0) {
-                    const restItem = items.filter(item => item._id !== id)
-                    setItems(restItem);
-                }
-            })
 
+        const confirm = window.confirm('are you want to delete ?')
+        if (confirm) {
+            const url = `http://localhost:4000/item/${id}`
+            fetch(url, {
+                method: 'DELETE',
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        const restItem = items.filter(item => item._id !== id)
+                        setItems(restItem);
+                    }
+                })
+        }
     }
 
 
@@ -34,13 +37,13 @@ const ManageItems = () => {
             <h1 className='manageAllItemsTitle'>Manage All Products</h1>
             <div className='manageItemContainer'>
                 {
-                    items.map(item=> <ItemCard key={item._id} item={item} deleteItem={deleteItem} /> )
-                   
+                    items.map(item => <ItemCard key={item._id} item={item} deleteItem={deleteItem} />)
+
                 }
             </div>
             <div className='addItemBtnBox'>
-            <Link className='addItemBtn' to='/additems'>Add a new product</Link>
-        </div>
+                <Link className='addItemBtn' to='/additems'>Add a new product</Link>
+            </div>
         </div>
 
     );

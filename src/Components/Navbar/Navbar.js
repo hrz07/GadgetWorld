@@ -14,6 +14,7 @@ const Navbar = () => {
             <h2>Gadget<span>World</span> </h2>
             <div className='button-section'>
                 <NavLink to='/'>Home</NavLink>
+                <NavLink to='/blog'>Blogs</NavLink>
                 {
                     user ?
                     <>

@@ -66,7 +66,7 @@ const Home = () => {
 
             <section className='inventory'>
                 {
-                    items.map(item => <InventoryCard key={item._id} item={item} />)
+                    items.slice(0,6).map(item => <InventoryCard key={item._id} item={item} />)
                 }
             </section>
             <div className='allItemBtndiv'>

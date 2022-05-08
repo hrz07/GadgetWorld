@@ -26,6 +26,7 @@ const AddItems = () => {
         fetch('http://localhost:4000/items', {
             method: 'POST', // or 'PUT'
             headers: {
+                'authorization': `${user.email} ${localStorage.getItem("accessToken")}`,
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),

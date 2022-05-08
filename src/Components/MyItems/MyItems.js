@@ -11,7 +11,11 @@ const MyItems = () => {
 
     const email = user?.email
     useEffect(() => {
-        fetch(`http://localhost:4000/item/?email=${email}`)
+        fetch(`http://localhost:4000/item/?email=${email}`, {
+            headers: {
+                'authorization': `${user.email} ${localStorage.getItem("accessToken")}`,
+            }
+        })
             .then(res => res.json())
             .then(data=> setMyItems(data))
     },[myItems,user])

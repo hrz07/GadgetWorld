@@ -133,3 +133,30 @@
 .sellerTexts{
     padding: 15px;
 }
+
+@media screen and (max-width:700px){
+    .banner{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .bannerText{
+        margin-left: 0;
+    }
+    .bannerText h3{
+        font-size: 30px;
+    }
+    .bannerText h1{
+        font-size: 40px;
+    }
+}
+@media screen and (max-width:800px){
+    .bannerText h1{
+        font-size: 40px;
+    }
+    .bannerText h3{
+        font-size: 26px;
+    }
+    .bannerText h4{
+        font-size: 20px;
+    }
+}

@@ -1,11 +1,11 @@
-import React, { useState,useEffect } from 'react';
-import { NavLink,useLocation, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Login.css'
 import auth from '../../firebase.init';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle,useAuthState, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle, useAuthState, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 
 const Login = () => {
 
@@ -25,9 +25,9 @@ const Login = () => {
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
+    ] = useSignInWithEmailAndPassword(auth);
 
-      const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
 
     const handleEmail = (e) => {
         const emailRegex = /\S+@\S+\.\S+/;
@@ -63,7 +63,22 @@ const Login = () => {
 
     useEffect(() => {
         if (user1) {
-            navigate(from);
+            const url = 'http://localhost:4000/login'
+            fetch(url, {
+                method: 'POST', // or 'PUT'
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ 
+                    email : user1.email
+                }),
+            })
+                .then(res => res.json())
+                .then(data => {
+                    localStorage.setItem("accessToken",data.token)
+                    navigate(from,{replace:true});
+                })
+            
         }
     }, [user1]);
 
@@ -103,11 +118,11 @@ const Login = () => {
                 </div>
 
                 <div className='or'>
-                <div></div>
-                <p>or</p>
-                <div></div>
+                    <div></div>
+                    <p>or</p>
+                    <div></div>
                 </div>
-                <button className='googleBtn' onClick={()=>signInWithGoogle()} > <FcGoogle className='googleIcon' size={18} /> Continue With Google</button>
+                <button className='googleBtn' onClick={() => signInWithGoogle()} > <FcGoogle className='googleIcon' size={18} /> Continue With Google</button>
             </div>
             <ToastContainer />
         </div>

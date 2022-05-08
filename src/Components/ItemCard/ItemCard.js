@@ -16,7 +16,7 @@ const ItemCard = ({ item, deleteItem }) => {
                 </div>
             </div>
             <div className='article'>
-                <small>`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus pariatur quaerat voluptatum consequatur ipsam ducimus sunt non libero nesciunt voluptatibus.`</small>
+                <small>{ description}</small>
                 <div className='stockInfo'>
                     <p className='blueBack'>Stock : {quantity}</p>
                     <p className='blueBack'>Suplier : {supplierName}</p>
