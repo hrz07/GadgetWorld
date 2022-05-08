@@ -1,6 +1,6 @@
 # GadgetWorld
 
-Live link of GadgetWorld [Here](https://github.com/facebook/create-react-app).
+Live link of GadgetWorld [Here](https://phone-mela.firebaseapp.com/).
 
 ## Which technologies are used in GadgetWorld project ?
 

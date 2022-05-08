@@ -7,7 +7,7 @@ const ManageItems = () => {
 
     const [items, setItems] = useState([])
     useEffect(() => {
-        fetch('http://localhost:4000/items')
+        fetch('https://fast-shelf-20550.herokuapp.com/items')
             .then(res => res.json())
             .then(data => setItems(data))
     }, [items])
@@ -17,7 +17,7 @@ const ManageItems = () => {
 
         const confirm = window.confirm('are you want to delete ?')
         if (confirm) {
-            const url = `http://localhost:4000/item/${id}`
+            const url = `https://fast-shelf-20550.herokuapp.com/item/${id}`
             fetch(url, {
                 method: 'DELETE',
             })

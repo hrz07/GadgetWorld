@@ -19,6 +19,7 @@ const ItemCard = ({ item, deleteItem }) => {
                 <small>{ description}</small>
                 <div className='stockInfo'>
                     <p className='blueBack'>Stock : {quantity}</p>
+                    <p className='blueBack'>Sold: { sold}</p>
                     <p className='blueBack'>Suplier : {supplierName}</p>
                 </div>
                 <button className='deleteBtn' onClick={() => deleteItem(_id)} >Delete</button>

@@ -11,19 +11,19 @@ const MyItems = () => {
 
     const email = user?.email
     useEffect(() => {
-        fetch(`http://localhost:4000/item/?email=${email}`, {
+        fetch(`https://fast-shelf-20550.herokuapp.com/item/?email=${email}`, {
             headers: {
                 'authorization': `${user.email} ${localStorage.getItem("accessToken")}`,
             }
         })
             .then(res => res.json())
             .then(data=> setMyItems(data))
-    },[myItems,user])
+    },[myItems,user,email])
 
 
 
     const deleteItem = (id) => {
-        const url = `http://localhost:4000/item/${id}`
+        const url = `https://fast-shelf-20550.herokuapp.com/item/${id}`
         fetch(url, {
             method: 'DELETE',
         })
@@ -37,13 +37,13 @@ const MyItems = () => {
     
       }
 
-
+      
     return (
         <div className='myItemContainer'>
         
             {
                 myItems.length<1 ? <h1>You dont added any product yet</h1> :
-                myItems.map(item=> <ItemCard key={item._id} item={item} deleteItem={deleteItem} /> )
+                myItems?.map(item=> <ItemCard key={item._id} item={item} deleteItem={deleteItem} /> )
             }
         </div>
     );

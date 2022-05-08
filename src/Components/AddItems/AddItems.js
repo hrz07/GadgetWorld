@@ -23,7 +23,7 @@ const AddItems = () => {
 
         const data = { name, price, img, quantity, description, sold, supplierEmail, supplierName }
 
-        fetch('http://localhost:4000/items', {
+        fetch('https://fast-shelf-20550.herokuapp.com/items', {
             method: 'POST', // or 'PUT'
             headers: {
                 'authorization': `${user.email} ${localStorage.getItem("accessToken")}`,

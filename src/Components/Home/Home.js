@@ -18,12 +18,10 @@ const Home = () => {
 
     const [items, setItems] = useState([])
     useEffect(() => {
-        fetch('http://localhost:4000/items')
+        fetch('https://fast-shelf-20550.herokuapp.com/items')
             .then(res => res.json())
             .then(data => setItems(data))
     }, [items])
-
-
 
 
     return (

@@ -7,20 +7,21 @@ const UpdatePage = () => {
     const [item, setItem] = useState([])
     const [changedQuantity, setChangedQuantity] = useState('')
     useEffect(() => {
-        fetch(`http://localhost:4000/item/${id}`)
+        fetch(`https://fast-shelf-20550.herokuapp.com/${id}`)
             .then(res => res.json())
             .then(data => setItem(data))
     }, [id, changedQuantity])
 
 
     let amount = item?.quantity * 1
+    let sold = item?.sold *1
 
     const deliverHandler = () => {
         amount = amount - 1;
-
-        fetch(`http://localhost:4000/item/${id}`, {
+        sold = sold + 1;
+        fetch(`https://fast-shelf-20550.herokuapp.com/item/${id}`, {
             method: 'PATCH',
-            body: JSON.stringify({ amount }),
+            body: JSON.stringify({ amount,sold }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
             },
@@ -37,7 +38,7 @@ const UpdatePage = () => {
         amount = amount + restack
 
 
-        fetch(`http://localhost:4000/item/${id}`, {
+        fetch(`https://fast-shelf-20550.herokuapp.com/item/${id}`, {
             method: 'PATCH',
             body: JSON.stringify({ amount }),
             headers: {
